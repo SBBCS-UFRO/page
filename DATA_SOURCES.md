@@ -10,4 +10,4 @@ This file is for maintainers and is not linked from the public website.
 - Alejandro Castro-Alvarez ORCID: https://orcid.org/0000-0001-8360-8027
 - UFRO: https://www.ufro.cl/
 
-The About and Research hero backgrounds are original generated visual assets prepared for this redesign and are not Science Tokyo photographs.
+The About and Research hero backgrounds are original generated visual assets prepared for this redesign.
