@@ -1,6 +1,6 @@
 # SB²CS UFRO — definitive GitHub Pages build
 
-Bilingual static website (English/Spanish) inspired by the clean institutional hierarchy of Science Tokyo while using SB²CS content and visual identity.
+Bilingual static website (English/Spanish) using SB²CS content and visual identity.
 
 ## Pages
 - Home
@@ -18,4 +18,4 @@ Upload the contents of this folder to the root of the GitHub Pages repository. N
 ## Important
 - Profile photographs currently use `assets/img/profile-placeholder.svg` unless an official portrait is supplied.
 - Academic profile links are intentionally conservative; only clearly verified direct identifiers are used.
-- About/Research hero visuals are original generated assets created for this redesign, not Science Tokyo photographs.
+- About/Research hero visuals are original generated assets created for this redesign.
