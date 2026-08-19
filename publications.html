@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complete SB²CS publication list for 2024–2026."><meta name="theme-color" content="#0a4fa3">
+  <title>Publications | SB²CS UFRO</title>
+  <link rel="icon" type="image/png" href="./assets/img/sbbcs-mark.png">
+  <link rel="alternate" hreflang="en" href="./publications.html"><link rel="alternate" hreflang="es" href="./es/publications.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+<style>
+/* Publications visual gallery — scoped to this page */
+.publications-visual { padding: clamp(64px, 7vw, 104px) 0; }
+.publications-intro { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:30px; align-items:end; margin-bottom:42px; }
+.publications-intro .eyebrow { grid-column:span 3; margin:0; color:var(--brand-deep); font-weight:600; font-size:18px; }
+.publications-intro h2 { grid-column:4 / span 7; margin:0; color:var(--brand-deep); font-size:clamp(42px,5vw,72px); line-height:.98; letter-spacing:-.035em; font-weight:500; }
+.publications-intro p { grid-column:4 / span 7; margin:18px 0 0; color:var(--ink-soft); font-size:18px; }
+
+.pub-featured { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:30px; align-items:stretch; padding:0 0 72px; border-bottom:1px solid var(--line); }
+.pub-featured__visual { grid-column:1 / span 7; min-height:420px; }
+.pub-featured__content { grid-column:8 / span 5; align-self:center; }
+.pub-featured__label { display:inline-block; margin:0 0 14px; color:var(--brand-green); font-size:14px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.pub-featured__content h2 { margin:0 0 16px; color:var(--brand-deep); font-size:clamp(36px,4vw,58px); line-height:1.03; letter-spacing:-.03em; font-weight:500; }
+.pub-featured__meta { margin:0 0 18px; color:var(--ink-soft); font-size:16px; }
+.pub-featured__summary { margin:0 0 26px; color:var(--ink-soft); font-size:18px; line-height:1.6; }
+.pub-link { display:inline-flex; align-items:center; gap:10px; color:var(--brand); font-weight:600; text-decoration:none; }
+.pub-link:hover { text-decoration:underline; text-underline-offset:4px; }
+
+.pub-visual { position:relative; overflow:hidden; background:linear-gradient(135deg,var(--surface-blue),#eef8f3); border:1px solid var(--line); }
+.pub-visual img { display:block; width:100%; height:100%; object-fit:cover; }
+.pub-visual__fallback { position:absolute; inset:0; display:grid; place-items:center; padding:28px; color:var(--brand-deep); text-align:center; background:linear-gradient(135deg,#eaf2fb 0%,#edf7f1 100%); }
+.pub-visual__fallback::before { content:''; position:absolute; width:180px; height:180px; border:2px solid rgba(10,79,163,.14); border-radius:50%; right:-42px; top:-52px; }
+.pub-visual__fallback::after { content:''; position:absolute; width:150px; height:86px; border:3px solid rgba(21,155,97,.18); clip-path:polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0 50%); left:-18px; bottom:12px; }
+.pub-visual__fallback span { position:relative; z-index:1; max-width:26ch; font-weight:600; line-height:1.25; }
+.pub-visual:not(.is-missing) .pub-visual__fallback { display:none; }
+
+.pub-year-block { padding:72px 0 0; }
+.pub-year-heading { display:flex; align-items:baseline; justify-content:space-between; gap:24px; padding-bottom:18px; border-bottom:1px solid var(--brand-deep); margin-bottom:30px; }
+.pub-year-heading h2 { margin:0; color:var(--brand-deep); font-size:38px; line-height:1; font-weight:600; }
+.pub-year-heading p { margin:0; color:var(--ink-soft); font-size:15px; }
+.pub-card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:46px 30px; }
+.pub-card { min-width:0; }
+.pub-card__visual { aspect-ratio:16/10; margin-bottom:18px; }
+.pub-card__year { margin:0 0 8px; color:var(--brand); font-size:14px; font-weight:700; }
+.pub-card h3 { margin:0 0 12px; color:var(--ink); font-size:clamp(24px,2vw,31px); line-height:1.13; font-weight:600; }
+.pub-card h3 a { color:inherit; text-decoration:none; }
+.pub-card h3 a:hover { color:var(--brand); }
+.pub-card__meta { margin:0 0 14px; color:var(--ink-soft); font-size:15px; line-height:1.45; }
+.pub-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.pub-tags span { display:inline-block; padding:4px 8px; border-radius:3px; background:#dfe9f6; color:var(--brand-deep); font-size:13px; line-height:1.2; font-weight:500; }
+.pub-tags span:nth-child(even) { background:#e3f1e9; color:#0d6f54; }
+
+.publications-note { margin-top:82px; padding:34px 0 0; border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:30px; }
+.publications-note strong { grid-column:span 3; color:var(--brand-deep); }
+.publications-note p { grid-column:4 / span 7; margin:0; color:var(--ink-soft); }
+
+@media (max-width: 1024px) {
+  .pub-featured__visual { grid-column:1 / span 6; min-height:360px; }
+  .pub-featured__content { grid-column:7 / span 6; }
+  .pub-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 900px) {
+  .publications-intro { grid-template-columns:repeat(8,minmax(0,1fr)); gap:18px; }
+  .publications-intro .eyebrow,.publications-intro h2,.publications-intro p { grid-column:1 / -1; }
+  .publications-intro h2 { margin-top:8px; }
+  .pub-featured { grid-template-columns:repeat(8,minmax(0,1fr)); gap:18px; }
+  .pub-featured__visual,.pub-featured__content { grid-column:1 / -1; }
+  .pub-featured__visual { min-height:0; aspect-ratio:16/10; }
+  .pub-featured__content { padding-top:12px; }
+  .publications-note { grid-template-columns:repeat(8,minmax(0,1fr)); gap:18px; }
+  .publications-note strong,.publications-note p { grid-column:1 / -1; }
+}
+@media (max-width: 620px) {
+  .publications-visual { padding:48px 0 70px; }
+  .publications-intro { margin-bottom:30px; }
+  .pub-featured { padding-bottom:54px; }
+  .pub-featured__content h2 { font-size:34px; }
+  .pub-card-grid { grid-template-columns:1fr; gap:42px; }
+  .pub-year-block { padding-top:54px; }
+  .pub-year-heading { align-items:flex-start; flex-direction:column; gap:6px; }
+  .pub-card h3 { font-size:26px; }
+  .publications-note { margin-top:62px; }
+}
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="g-header" data-header>
+  <div class="global-header-top">
+    <a class="global-brand" href="./index.html" aria-label="SB²CS Home"><img src="./assets/img/sbbcs-wordmark-header.png" alt="Structural Bioinformatics &amp; Bioactive Compound Synthesis Lab"></a>
+    <div class="global-utility">
+      <nav aria-label="Utility navigation"><a href="https://www.ufro.cl/" rel="noreferrer">Universidad de La Frontera</a><a href="https://www.med.ufro.cl/cemt/index.php" rel="noreferrer">CEMT-UFRO</a><a href="./contact.html#opportunities">Student opportunities</a></nav>
+      <button class="search-trigger" type="button" data-search-button><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m15.5 15.5 5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Search</span></button>
+      <div class="language-switch" aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 12h15M12 4c2.2 2.2 3.2 4.9 3.2 8S14.2 17.8 12 20c-2.2-2.2-3.2-4.9-3.2-8S9.8 6.2 12 4Z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><a href="./es/publications.html" lang="es">Español</a><span class="divider">|</span><span class="is-active">English</span></div>
+    </div>
+  </div>
+  <div class="global-header-bottom">
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="./about.html">About SB²CS</a><a href="./research.html">Research</a><a href="./people.html">People</a><a href="./publications.html" aria-current="page">Publications</a><a href="./news.html">News</a><a href="./contact.html">Contact</a></nav>
+    <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button><span class="menu-glyph" aria-hidden="true"><span></span></span><span class="menu-label" data-menu-label>Menu</span></button>
+  </div>
+</header>
+<div class="mega-menu" id="site-menu" data-menu-panel data-open="false">
+  <div class="container mega-menu-inner"><div class="mega-grid">
+    <nav class="mega-main" aria-label="Expanded navigation"><a href="./index.html"><span>Home</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a><a href="./about.html"><span>About SB²CS</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a><a href="./research.html"><span>Research</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a><a href="./people.html"><span>People</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a><a href="./publications.html"><span>Publications</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a><a href="./news.html"><span>News</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a><a href="./contact.html"><span>Contact</span><span class="nav-arrow icon-external" aria-hidden="true"></span></a></nav>
+    <div class="mega-side">
+      <p>Structural Bioinformatics &amp; Bioactive Compound Synthesis Lab</p>
+      <p>Universidad de La Frontera<br>Temuco, Chile</p>
+      <p><a href="https://www.instagram.com/bioinfo_syncomp/" rel="noreferrer">Laboratory Instagram <span class="icon-external" aria-hidden="true"></span></a></p>
+      <p><a href="https://sites.google.com/view/sbbcs-ufro/home" rel="noreferrer">Previous Google Site <span class="icon-external" aria-hidden="true"></span></a></p>
+    </div>
+  </div></div>
+</div>
+<div class="search-panel" data-search-panel data-open="false" aria-hidden="true">
+  <div class="container search-inner">
+    <div class="search-top"><h2>Search SB²CS</h2><button class="search-close" type="button" data-search-close>Close search ×</button></div>
+    <div class="search-form"><input data-search-input type="search" placeholder="Search the site" aria-label="Search the site"><button type="button">Search</button></div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+<main id="main"><section class="pattern-page-hero pattern-page-hero--blue"><div class="pattern-hero-art" aria-hidden="true"><span class="hero-orb hero-orb--large"></span><span class="hero-orb hero-orb--small"></span><span class="hero-orb hero-orb--tiny"></span><span class="hero-hex"></span><span class="hero-link hero-link--core"></span><span class="hero-link hero-link--up"></span><span class="hero-link hero-link--down"></span><span class="hero-node hero-node--core"></span><span class="hero-node hero-node--up"></span><span class="hero-node hero-node--mid"></span><span class="hero-node hero-node--down"></span></div><div class="container page-hero-grid"><p class="page-kicker">Publications</p><h1 class="page-title">Research<br>outputs.</h1><p class="page-lead">Laboratory publications presented as a visual research gallery, using graphical abstracts as an entry point to each study.</p></div></section><section class="publications-visual"><div class="container"><div class="publications-intro"><p class="eyebrow">Published research</p><h2>Science that can also be explored visually.</h2><p>Graphical abstracts provide an immediate view of each study while preserving the chronological and bibliographic structure expected from a research group website.</p></div><section class="pub-featured"><div class="pub-visual pub-featured__visual"><img src="./assets/img/publications/2026-antioxidants-973.jpg" alt="Graphical abstract — Beyond Food Preservation: Translational Perspectives of Synthetic Antioxidants" loading="eager" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Antioxidants 2026, 15(8), 973</span></div></div><div class="pub-featured__content"><span class="pub-featured__label">Featured publication · 2026</span><h2>Beyond Food Preservation: Translational Perspectives of Synthetic Antioxidants</h2><p class="pub-featured__meta">Antioxidants 2026, 15(8), 973 · DOI 10.3390/antiox15080973</p><p class="pub-featured__summary">A review of synthetic antioxidants extending the discussion beyond food preservation to their translational perspectives and biomedical relevance.</p><a class="pub-link" href="https://doi.org/10.3390/antiox15080973" rel="noreferrer">View publication <span class="icon-external" aria-hidden="true"></span></a></div></section><section class="pub-year-block"><div class="pub-year-heading"><h2>2025</h2><p>Six publications</p></div><div class="pub-card-grid"><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2025-polymers-219.jpg" alt="Graphical abstract — Improving Sensitivity and Resolution of Dendrimer Identification in MALDI-TOF Mass Spectrometry Using Varied Matrix Combinations" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Polymers 2025, 17(2), 219</span></div></div><p class="pub-card__year">2025</p><h3><a href="https://doi.org/10.3390/polym17020219" rel="noreferrer">Improving Sensitivity and Resolution of Dendrimer Identification in MALDI-TOF Mass Spectrometry Using Varied Matrix Combinations</a></h3><p class="pub-card__meta">Polymers 2025, 17(2), 219 · DOI 10.3390/polym17020219</p><div class="pub-tags"><span>Mass spectrometry</span><span>Polymers</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2025-jmolstruct-141228.jpg" alt="Graphical abstract — Synthesis, antitumoral activity, and in silico studies on Smoothened receptor of new 2,6,9-trisubstituted purine derivatives" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Journal of Molecular Structure 2025, 1328, 141228</span></div></div><p class="pub-card__year">2025</p><h3><a href="https://doi.org/10.1016/j.molstruc.2024.141228" rel="noreferrer">Synthesis, antitumoral activity, and in silico studies on Smoothened receptor of new 2,6,9-trisubstituted purine derivatives</a></h3><p class="pub-card__meta">Journal of Molecular Structure 2025, 1328, 141228 · DOI 10.1016/j.molstruc.2024.141228</p><div class="pub-tags"><span>Drug design</span><span>In silico</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2025-aisy-2400986.jpg" alt="Graphical abstract — Applied Artificial Intelligence in Materials Science and Material Design" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Advanced Intelligent Systems 2025, 7(8), 2400986</span></div></div><p class="pub-card__year">2025</p><h3><a href="https://doi.org/10.1002/aisy.202400986" rel="noreferrer">Applied Artificial Intelligence in Materials Science and Material Design</a></h3><p class="pub-card__meta">Advanced Intelligent Systems 2025, 7(8), 2400986 · DOI 10.1002/aisy.202400986</p><div class="pub-tags"><span>Artificial intelligence</span><span>Materials science</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2025-archpharm-e2400387.jpg" alt="Graphical abstract — First in class pyrrolo[2,3-d]pyrimidine derivatives fused to fluorobenzylpiperidines as dual ligands of acetylcholinesterase and histamine H3 receptor" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Archiv der Pharmazie 2025, 358(3), e2400387</span></div></div><p class="pub-card__year">2025</p><h3><a href="https://doi.org/10.1002/ardp.202400387" rel="noreferrer">First in class pyrrolo[2,3-d]pyrimidine derivatives fused to fluorobenzylpiperidines as dual ligands of acetylcholinesterase and histamine H3 receptor</a></h3><p class="pub-card__meta">Archiv der Pharmazie 2025, 358(3), e2400387 · DOI 10.1002/ardp.202400387</p><div class="pub-tags"><span>Medicinal chemistry</span><span>Dual ligands</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2025-ijms-3786.jpg" alt="Graphical abstract — Metabolites Isolated from Senecio nutans Sch. Bip and Their Synthesized Oximes Inhibit Angiotensin I-Converting Enzyme Activity in Vascular Smooth Muscle" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>International Journal of Molecular Sciences 2025, 26(8), 3786</span></div></div><p class="pub-card__year">2025</p><h3><a href="https://doi.org/10.3390/ijms26083786" rel="noreferrer">Metabolites Isolated from Senecio nutans Sch. Bip and Their Synthesized Oximes Inhibit Angiotensin I-Converting Enzyme Activity in Vascular Smooth Muscle</a></h3><p class="pub-card__meta">International Journal of Molecular Sciences 2025, 26(8), 3786 · DOI 10.3390/ijms26083786</p><div class="pub-tags"><span>Natural products</span><span>ACE</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2025-ijms-3389.jpg" alt="Graphical abstract — Ultrasound-Assisted Synthesis of Substituted Chalcone-Linked 1,2,3-Triazole Derivatives as Antiproliferative Agents: In Vitro Antitumor Activity and Molecular Docking Studies" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>International Journal of Molecular Sciences 2025, 26(7), 3389</span></div></div><p class="pub-card__year">2025</p><h3><a href="https://doi.org/10.3390/ijms26073389" rel="noreferrer">Ultrasound-Assisted Synthesis of Substituted Chalcone-Linked 1,2,3-Triazole Derivatives as Antiproliferative Agents: In Vitro Antitumor Activity and Molecular Docking Studies</a></h3><p class="pub-card__meta">International Journal of Molecular Sciences 2025, 26(7), 3389 · DOI 10.3390/ijms26073389</p><div class="pub-tags"><span>Medicinal chemistry</span><span>Molecular docking</span></div></article></div></section><section class="pub-year-block"><div class="pub-year-heading"><h2>2024</h2><p>Three publications</p></div><div class="pub-card-grid"><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2024-antioxidants-1345.jpg" alt="Graphical abstract — First Report on Cationic Triphenylphosphonium Compounds as Mitochondriotropic H3R Ligands with Antioxidant Properties" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Antioxidants 2024, 13(11), 1345</span></div></div><p class="pub-card__year">2024</p><h3><a href="https://doi.org/10.3390/antiox13111345" rel="noreferrer">First Report on Cationic Triphenylphosphonium Compounds as Mitochondriotropic H3R Ligands with Antioxidant Properties</a></h3><p class="pub-card__meta">Antioxidants 2024, 13(11), 1345 · DOI 10.3390/antiox13111345</p><div class="pub-tags"><span>Antioxidants</span><span>H3 receptor</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2024-molecules-1604.jpg" alt="Graphical abstract — Nickel(II)-Catalyzed Formal [3+2] Cycloadditions between Indoles and Donor–Acceptor Cyclopropanes" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Molecules 2024, 29(7), 1604</span></div></div><p class="pub-card__year">2024</p><h3><a href="https://doi.org/10.3390/molecules29071604" rel="noreferrer">Nickel(II)-Catalyzed Formal [3+2] Cycloadditions between Indoles and Donor–Acceptor Cyclopropanes</a></h3><p class="pub-card__meta">Molecules 2024, 29(7), 1604 · DOI 10.3390/molecules29071604</p><div class="pub-tags"><span>Organic synthesis</span><span>Cycloaddition</span></div></article><article class="pub-card"><div class="pub-visual pub-card__visual"><img src="./assets/img/publications/2024-pharmaceutics-649.jpg" alt="Graphical abstract — New Inhibitors of Bcr-Abl Based on 2,6,9-Trisubstituted Purine Scaffold Elicit Cytotoxicity in Chronic Myeloid Leukemia-Derived Cell Lines Sensitive and Resistant to TKIs" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('is-missing')"><div class="pub-visual__fallback"><span>Graphical abstract<br>Pharmaceutics 2024, 16(5), 649</span></div></div><p class="pub-card__year">2024</p><h3><a href="https://doi.org/10.3390/pharmaceutics16050649" rel="noreferrer">New Inhibitors of Bcr-Abl Based on 2,6,9-Trisubstituted Purine Scaffold Elicit Cytotoxicity in Chronic Myeloid Leukemia-Derived Cell Lines Sensitive and Resistant to TKIs</a></h3><p class="pub-card__meta">Pharmaceutics 2024, 16(5), 649 · DOI 10.3390/pharmaceutics16050649</p><div class="pub-tags"><span>Bcr-Abl</span><span>Leukemia</span></div></article></div></section><div class="publications-note"><strong>Graphical abstracts</strong><p>Place the original images inside <code>assets/img/publications/</code> using the filenames defined in this file. If an image is not available yet, the card automatically displays an SB²CS graphical placeholder instead of a broken-image icon.</p></div></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-main">
+    <nav class="footer-breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a><span class="breadcrumb-sep" aria-hidden="true"></span><a href="./publications.html">Publications</a><span class="breadcrumb-sep" aria-hidden="true"></span><span>Research outputs</span></nav>
+    <div class="footer-grid">
+      <div class="footer-lab">
+        <div class="footer-brand-wrap"><img class="footer-lab-logo" src="./assets/img/sbbcs-wordmark-footer-white.png" alt="Structural Bioinformatics &amp; Bioactive Compound Synthesis Lab"><sup aria-label="registered">®</sup></div>
+        <p>Integrating structural bioinformatics, computational chemistry and multicomponent synthesis to design and understand bioactive molecules.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation"><h3>Explore</h3><a href="./about.html">About SB²CS</a><a href="./research.html">Research</a><a href="./people.html">People</a><a href="./publications.html">Publications</a><a href="./news.html">News</a><a href="./contact.html">Contact</a></nav>
+      <nav class="footer-links" aria-label="External links"><h3>Links</h3>
+        <a href="./contact.html">Contact</a>
+        <a href="https://www.ufro.cl/" rel="noreferrer">Universidad de La Frontera <span class="icon-external" aria-hidden="true"></span></a>
+        <a href="https://www.instagram.com/bioinfo_syncomp/" rel="noreferrer">Instagram <span class="icon-external" aria-hidden="true"></span></a>
+        <a href="https://sites.google.com/view/sbbcs-ufro/home" rel="noreferrer">Previous Google Site <span class="icon-external" aria-hidden="true"></span></a>
+      </nav>
+    </div>
+    <div class="footer-affiliation"><span>Affiliated with</span><img src="./assets/img/ufro-white-original.png" alt="Universidad de La Frontera"></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-row"><span>© <span data-year></span> SB²CS® — Universidad de La Frontera. All rights reserved.</span><span>Powered by GitHub Pages &amp; RAVEN | プログラム</span></div></div>
+</footer>
+<script src="./assets/js/main.js"></script>
+</body></html>
