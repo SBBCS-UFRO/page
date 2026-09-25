@@ -178,5 +178,33 @@
     lastY = y;
   }, { passive: true });
 
+
+
+  const resourceExplorer = document.querySelector('[data-resource-explorer]');
+  if (resourceExplorer) {
+    const resourceGrid = resourceExplorer.querySelector('[data-resource-grid]');
+    const resourceDetailView = resourceExplorer.querySelector('[data-resource-detail-view]');
+    const resourceDetails = [...resourceExplorer.querySelectorAll('[data-resource-detail]')];
+    const resourceCards = [...resourceExplorer.querySelectorAll('[data-resource-open]')];
+    function closeResourceDetails() {
+      resourceGrid?.removeAttribute('hidden');
+      if (resourceDetailView) resourceDetailView.hidden = true;
+      resourceDetails.forEach(detail => detail.hidden = true);
+      resourceCards.forEach(card => card.setAttribute('aria-expanded', 'false'));
+    }
+    function openResourceDetail(key) {
+      resourceGrid?.setAttribute('hidden', 'hidden');
+      if (resourceDetailView) resourceDetailView.hidden = false;
+      resourceDetails.forEach(detail => {
+        const active = detail.getAttribute('data-resource-detail') === key;
+        detail.hidden = !active;
+      });
+      resourceCards.forEach(card => card.setAttribute('aria-expanded', String(card.getAttribute('data-resource-open') === key)));
+      resourceDetailView?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    resourceCards.forEach(card => card.addEventListener('click', () => openResourceDetail(card.getAttribute('data-resource-open'))));
+    resourceExplorer.querySelectorAll('[data-resource-back]').forEach(button => button.addEventListener('click', closeResourceDetails));
+  }
+
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 })();

@@ -1,19 +1,21 @@
-# Content sources used in this build
+# DATA SOURCES
 
-This file is for maintainers and is not linked from the public website.
+## Resources page additions (2026-09-25 update)
 
-- Legacy SB&BCS publication list: https://sites.google.com/view/sbbcs-ufro/publications
-- Legacy SB&BCS home/team content: https://sites.google.com/view/sbbcs-ufro/home
-- 2026 Antioxidants paper: https://doi.org/10.3390/antiox15080973
-- Moleku releases: https://github.com/pipelzm/Moleku/releases
-- SB²CS Instagram: https://www.instagram.com/bioinfo_syncomp/
-- Alejandro Castro-Alvarez ORCID: https://orcid.org/0000-0001-8360-8027
-- UFRO: https://www.ufro.cl/
+### Kimün
+- Hardware summary based on the previously supplied Kimün system inventory and terminal outputs.
+- Visual identity updated with the user-supplied Kimün logos.
 
-The About and Research hero backgrounds are original generated visual assets prepared for this redesign and are not Science Tokyo photographs.
+### Workstation I
+- Hardware/software specifications based on the user-supplied system screenshot and terminal output.
+- Visual references based on the user-supplied workstation photograph and the “Powered by Kimün” graphic.
 
-## 2026 expansion
-- Historical contact details: https://sites.google.com/view/sbbcs-ufro/contact?authuser=0
-- Acknowledgments reference: https://mlkfeed.framer.website/about
-- Moleku repository: https://github.com/pipelzm/Moleku
-- 2026 contributor affiliations: https://doi.org/10.3390/antiox15080973
+### Workstation II
+- Described as a complementary local workstation; detailed inventory pending future documentation.
+
+### Anton Paar microwave
+- Model updated to **Anton Paar Monowave 400** based on the user’s instruction.
+- Visual identity and reference image based on user-supplied Anton Paar logo and Monowave 400 image.
+
+### Shared resources / NLHPC
+- Existing institutional logos retained from the prior site package.
