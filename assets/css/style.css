@@ -770,3 +770,33 @@ button { color: inherit; }
   .contact-card dl > div { grid-template-columns:1fr; gap:4px; }
   .contact-map,.contact-map iframe { min-height:360px; }
 }
+
+
+/* 2026 logo integration — acknowledgments + Moleku. */
+.ack-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.ack-grid a { min-height:250px; padding:22px; justify-content:flex-start; }
+.ack-logo-wrap { width:100%; height:118px; display:flex; align-items:center; justify-content:center; margin:0 0 20px !important; color:inherit !important; }
+.ack-logo { display:block; max-width:100%; max-height:108px; width:auto; height:auto; object-fit:contain; }
+.ack-logo--faculty { max-height:112px; }
+.ack-logo--cemt { max-width:88%; max-height:88px; }
+.ack-logo--nlhpc { max-width:88%; max-height:96px; }
+.ack-logo--biogem { max-height:112px; }
+.ack-logo--bioren { max-width:92%; max-height:88px; }
+.ack-grid strong { margin-top:auto; }
+.ack-grid strong + span { margin-top:8px; }
+.software-mark--logo { background:#fff; border:1px solid var(--line); padding:44px; min-height:360px; }
+.software-mark--logo::before,.software-mark--logo::after { display:none; }
+.software-mark--logo img { width:min(100%,310px); height:auto; object-fit:contain; display:block; transition:transform .2s ease; }
+.software-mark--logo:hover img { transform:scale(1.025); }
+.button-outline--primary { background:var(--brand-deep); color:#fff; }
+.button-outline--primary:hover { background:var(--brand); border-color:var(--brand); }
+@media (max-width:900px) {
+  .ack-grid { grid-template-columns:1fr 1fr; }
+  .software-mark--logo { min-height:300px; padding:34px; }
+}
+@media (max-width:620px) {
+  .ack-grid { grid-template-columns:1fr; }
+  .ack-grid a { min-height:220px; }
+  .software-mark--logo { min-height:230px; padding:30px; }
+  .software-mark--logo img { width:min(76vw,260px); }
+}
