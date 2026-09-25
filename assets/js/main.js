@@ -71,6 +71,10 @@
     ['Investigación','research.html','Bioinformática estructural, síntesis multicomponente y diseño molecular'],
     ['Equipo','people.html','Investigadores, estudiantes y colaboradores'],
     ['Publicaciones','publications.html','Artículos, resultados y producción científica'],
+    ['Software','softwares.html','Moleku y herramientas desarrolladas por el laboratorio'],
+    ['Galería','gallery.html','Fotografías, actividades y vida del laboratorio'],
+    ['Colaboradores','contributors.html','Investigadores y personas que han contribuido a SB²CS'],
+    ['Recursos','resources.html','Servidores, estaciones de trabajo e instrumentación'],
     ['Noticias','news.html','Novedades, software, publicaciones y actividades del laboratorio'],
     ['Contacto','contact.html','Colaboración, oportunidades y Universidad de La Frontera']
   ] : [
@@ -79,6 +83,10 @@
     ['Research','research.html','Structural bioinformatics, multicomponent synthesis and molecular design'],
     ['People','people.html','Researchers, students and collaborators'],
     ['Publications','publications.html','Papers, outputs and scholarly work'],
+    ['Softwares','softwares.html','Moleku and software developed by the laboratory'],
+    ['Gallery','gallery.html','Photography, activities and laboratory life'],
+    ['Contributors','contributors.html','Researchers and people contributing to SB²CS'],
+    ['Resources','resources.html','Servers, workstations and research instrumentation'],
     ['News','news.html','Updates, software, publications and laboratory activities'],
     ['Contact','contact.html','Collaboration, opportunities and Universidad de La Frontera']
   ];

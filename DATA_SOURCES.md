@@ -10,4 +10,10 @@ This file is for maintainers and is not linked from the public website.
 - Alejandro Castro-Alvarez ORCID: https://orcid.org/0000-0001-8360-8027
 - UFRO: https://www.ufro.cl/
 
-The About and Research hero backgrounds are original generated visual assets prepared for this redesign.
+The About and Research hero backgrounds are original generated visual assets prepared for this redesign and are not Science Tokyo photographs.
+
+## 2026 expansion
+- Historical contact details: https://sites.google.com/view/sbbcs-ufro/contact?authuser=0
+- Acknowledgments reference: https://mlkfeed.framer.website/about
+- Moleku repository: https://github.com/pipelzm/Moleku
+- 2026 contributor affiliations: https://doi.org/10.3390/antiox15080973
